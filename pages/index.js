@@ -8,6 +8,7 @@ export default function Home() {
         <div className="bg-gray-800 flex flex-col">
             <Navbar />
             <Hero />
+            <h1 className="text-white text-4xl">Welcome to my page</h1>
         </div>
     )
 }
