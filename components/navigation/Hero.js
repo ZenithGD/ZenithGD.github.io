@@ -17,7 +17,7 @@ function CamRotate() {
 function Hero() {
     PointCloud({density: 4, radius: 1})
     return (
-        <div className='-z-10 bg-gray-900 absolute h-screen w-screen'>
+        <div className='h-screen w-full'>
             <Canvas>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
