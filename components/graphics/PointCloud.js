@@ -1,28 +1,34 @@
 import React, { Component, useRef, useMemo } from 'react'
 import * as THREE from 'three'
-import { a } from '@react-spring/three'
 
 function PointCloud({density, radius, pointSize, pointColor}) {
 
     // No useMemo needed if density and radius are assumed to be constant
     const genVertices = (d, r, rand) => {
+        
         // Create point buffer geometry
-        const geometry = new THREE.SphereBufferGeometry(
-            r, // sphere radius
-            d, // width subdivisions
-            d // height subdivisions
-            // full sphere
-        )
+        const points = []
+        for (var i = 0; i < d; i++) {
+            points.push(new THREE.Vector3().setFromSphericalCoords(
+                r + Math.random() * rand - rand / 2,
+                Math.random() * 4 * Math.PI,
+                Math.random() * 4 * Math.PI
+            ))
+        }
 
-        return geometry.attributes.position.array.map(e => e *= ((Math.random() * r * rand) + r * rand) )
+        var a = points.map(p => [p.x, p.y, p.z]).flat()
+
+        console.log(a)
+
+        return a
     }
 
-    var vertices = genVertices(density, radius, 0.2)
+    var vertices = genVertices(density, radius, 100)
 
     return (
         <points>
             <bufferGeometry attach="geometry">
-                <a.bufferAttribute
+                <bufferAttribute
                     attachObject={['attributes', 'position']}
                     count={vertices.length / 3}
                     // this renders the dots fine

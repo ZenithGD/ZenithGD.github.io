@@ -5,6 +5,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            colors: {
+                'gray-850': '#18212F'
+            },
             fontFamily: {
                 oswald: [ 'Oswald', 'monospace' ]
             },
