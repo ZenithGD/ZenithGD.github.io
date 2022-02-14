@@ -21,7 +21,7 @@ export const wvItem = {
         transition: {
             type: "spring",
             bounce: 0.4,
-            duration: 0.8
+            duration: 1
         }
     }
 }
@@ -30,6 +30,22 @@ export const wvCardRight = {
     offscreen: {
         opacity: 0,
         x: -200
+    },
+    onscreen: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 1
+        }
+    }
+}
+
+export const wvCardLeft = {
+    offscreen: {
+        opacity: 0,
+        x: 200
     },
     onscreen: {
         opacity: 1,
