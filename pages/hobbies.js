@@ -1,7 +1,11 @@
 import React from 'react';
 
 function Hobbies() {
-  return <div></div>;
+    return (
+        <div className='min-h-screen'>
+
+        </div>
+    );
 }
 
 export default Hobbies;

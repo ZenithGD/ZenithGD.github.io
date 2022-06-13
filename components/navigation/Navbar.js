@@ -26,9 +26,9 @@ function Navbar() {
                     <p className="text-xl text-cyan-100 font-bold fromCenter">Hobbies</p>
                 </button>
             </Link>
-            <Link href="career">
+            <Link href="projects">
                 <button className='w-28'>
-                    <p className="text-xl text-cyan-100 font-bold fromCenter">Career</p>
+                    <p className="text-xl text-cyan-100 font-bold fromCenter">Projects</p>
                 </button>
             </Link>
             <Link href="contact">

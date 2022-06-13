@@ -2,23 +2,7 @@ import Hero from '../components/navigation/Hero'
 import { wvItem, wvContainer, wvCardRight, wvCardLeft } from '../animation/indexVariants'
 import { motion } from "framer-motion"
 
-const THRESHOLD = 15
-
 export default function Home() {
-
-    function handleHover(e) {
-        const { clientX, clientY, currentTarget } = e;
-        const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
-
-        const horizontal = (clientX - offsetLeft) / clientWidth;
-        const vertical = (clientY - offsetTop) / clientHeight;
-
-        const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
-        const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
-
-        e.currentTarget.style.transform =
-		    `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
-    }
 
     return (
         <>
@@ -80,6 +64,7 @@ export default function Home() {
                     </div>
                 </motion.div>
 
+                
             </div>
         </>
     )

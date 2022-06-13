@@ -2,7 +2,7 @@ import React from 'react'
 
 function Bio() {
     return (
-        <div>
+        <div className='min-h-screen'>
             a
         </div>
     )
