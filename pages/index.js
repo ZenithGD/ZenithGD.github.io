@@ -1,8 +1,9 @@
+import Layout from '../components/layout/MainLayout'
 import Hero from '../components/navigation/Hero'
 import { wvItem, wvContainer, wvCardRight, wvCardLeft } from '../animation/indexVariants'
 import { motion } from "framer-motion"
 
-export default function Home() {
+function Home() {
 
     return (
         <>
@@ -63,9 +64,17 @@ export default function Home() {
                         </div>
                     </div>
                 </motion.div>
-
-                
             </div>
         </>
     )
 }
+
+Home.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}
+
+export default Home

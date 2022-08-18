@@ -1,0 +1,20 @@
+CREATE TABLE pf_projects (
+  prj_id      int          not null auto_increment,
+  prj_name    varchar(100) not null,
+  prj_desc    text,
+  prj_cr_date date,
+  prj_url     text,
+  primary key(prj_id)
+);
+
+CREATE TABLE pf_tags (
+  tag_id      int          primary key,
+  tag_name    varchar(100) not null
+);
+
+CREATE TABLE pf_blogentry (
+  be_id       int          not null auto_increment,
+  be_date     date,
+  be_content  mediumtext,
+  primary key(be_id)
+);

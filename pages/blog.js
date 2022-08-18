@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout from '../components/layout/MainLayout'
 
 function Hobbies() {
     return (
@@ -6,6 +7,13 @@ function Hobbies() {
 
         </div>
     );
+}
+Hobbies.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
 }
 
 export default Hobbies;
