@@ -6,4 +6,4 @@ You can also find links to my social networks right there, if you want to contac
 
 ## Notes
 
-For now, the portfolio is only available in Spanish, as it is my main language, but I'm planning to make it available in more languages. 
+For now, the portfolio is only available in Spanish, as it is my main language, but I'm planning to make it available in more languages.
