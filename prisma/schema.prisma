@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,4 +5,43 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model pf_blogentries {
+  be_id             Int                 @id @default(autoincrement())
+  be_date           DateTime?           @db.Date
+  be_content        String?
+  pf_blogentry_tags pf_blogentry_tags[]
+}
+
+model pf_blogentry_tags {
+  bt_be_id       Int
+  bt_tag_id      Int
+  pf_blogentries pf_blogentries @relation(fields: [bt_be_id], references: [be_id], onDelete: NoAction, onUpdate: NoAction)
+  pf_tags        pf_tags        @relation(fields: [bt_tag_id], references: [tag_id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([bt_be_id, bt_tag_id])
+}
+
+model pf_project_tags {
+  pt_prj_id   Int         @id
+  pt_tag_id   Int
+  pf_projects pf_projects @relation(fields: [pt_prj_id], references: [prj_id], onDelete: NoAction, onUpdate: NoAction)
+  pf_tags     pf_tags     @relation(fields: [pt_tag_id], references: [tag_id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model pf_projects {
+  prj_id          Int              @id @default(autoincrement())
+  prj_name        String           @db.VarChar(100)
+  prj_desc        String?
+  prj_cr_date     DateTime?        @db.Date
+  prj_url         String?
+  pf_project_tags pf_project_tags?
+}
+
+model pf_tags {
+  tag_id            Int                 @id @default(autoincrement())
+  tag_name          String              @db.VarChar(100)
+  pf_blogentry_tags pf_blogentry_tags[]
+  pf_project_tags   pf_project_tags[]
 }
