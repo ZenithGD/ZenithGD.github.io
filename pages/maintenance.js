@@ -16,7 +16,7 @@ function Maintenance() {
         className='mx-auto text-center flex flex-col justify-between gap-6'>
         <p className='font-bold text-7xl text-cyan-100'>¡Alto ahí!</p>
         <p className='font-bold text-5xl text-cyan-100'>Página en mantenimiento.</p>
-        <p className='text-cyan-500 text-xl'>Durante la espera, puedes consultar fotos de gatitos <a href='https://cataas.com/' className='underline'>aquí</a>.</p>
+        <p className='text-cyan-500 text-xl'>Durante la espera, puedes consultar fotos de gatitos <a href='https://aws.random.cat' className='underline'>aquí</a>.</p>
       </motion.div>
     </div>
   )
