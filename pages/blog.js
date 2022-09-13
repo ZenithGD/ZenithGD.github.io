@@ -1,14 +1,22 @@
 import React from 'react';
 import Layout from '../components/layout/MainLayout'
 
-function Hobbies() {
+const blogEntries = [
+  {
+    title: "¡Bienvenidos!",
+    brief: "Mi primer post",
+  }
+]
+
+function Blog() {
     return (
         <div className='min-h-screen'>
 
         </div>
     );
 }
-Hobbies.getLayout = function getLayout(page) {
+
+Blog.getLayout = function getLayout(page) {
   return (
     <Layout>
       {page}
@@ -16,4 +24,4 @@ Hobbies.getLayout = function getLayout(page) {
   )
 }
 
-export default Hobbies;
+export default Blog;

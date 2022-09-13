@@ -9,7 +9,7 @@ function Navbar() {
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () =>
-                setScroll(window.pageYOffset > window.innerHeight)
+                setScroll(window.pageYOffset > 1)
             );
         }
     }, []);

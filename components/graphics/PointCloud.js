@@ -17,9 +17,6 @@ function PointCloud({density, radius, pointSize, pointColor}) {
         }
 
         var a = points.map(p => [p.x, p.y, p.z]).flat()
-
-        console.log(a)
-
         return a
     }
 
