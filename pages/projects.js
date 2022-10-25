@@ -89,9 +89,11 @@ function Projects() {
         </motion.h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
           {trail.map((props, key) => (
-            <animated.div style={props}>
+            <animated.div 
+              key={key} 
+              style={props}
+            >
               <ProjectCard
-                key={key}
                 name={projects[key].name}
                 desc={projects[key].desc}
                 tags={projects[key].tags}
