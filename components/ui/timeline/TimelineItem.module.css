@@ -1,0 +1,12 @@
+.timeline-element {
+  align-self: flex-start;
+  width: 50%;
+}
+
+.timeline-element:nth-child(odd) {
+  align-self: flex-end;
+}
+
+.timeline-element:nth-child(odd) {
+  align-self: flex-end;
+}
