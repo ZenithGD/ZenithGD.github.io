@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 
-import './Timeline.module.css'
-
 function TimelineItem({title, text, link}) {
   return (
     <div className='bg-gray-700 drop-shadow-md p-4 timeline-element'>

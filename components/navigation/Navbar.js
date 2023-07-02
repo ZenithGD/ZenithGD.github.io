@@ -15,7 +15,7 @@ function Navbar() {
     }, []);
 
     return (
-        <div className={`z-50 fixed transition-all duration-200 top-0 w-full h-14 flex justify-center gap-4 ${scroll ? 'bg-gray-850 filter drop-shadow-md' : ''}`}>
+        <div className={`z-50 fixed transition-all duration-200 top-0 w-full h-14 flex items-center justify-center gap-4 ${scroll ? 'bg-gray-850 filter drop-shadow-md' : ''}`}>
             <Link href="/">
                 <button className='w-28'>
                     <p className="text-xl text-cyan-100 font-bold fromRight">Inicio</p>
